@@ -1,0 +1,58 @@
+.container {
+  background-color: green;
+}
+.container h1 {
+  color: beige;
+}
+.container p {
+  color: antiquewhite;
+}
+.container p span {
+  color: aqua;
+}
+
+p {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.btn:hover {
+  background: red;
+}
+
+button:nth-child(1) {
+  background: orange;
+  color: white;
+  width: 100px;
+}
+button:nth-child(2) {
+  background: orange;
+  color: white;
+  width: 200px;
+}
+button:nth-child(3) {
+  background: orange;
+  color: white;
+  width: 300px;
+}
+
+.one {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  color: green;
+}
+
+.two {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: purple;
+  color: yellow;
+}/*# sourceMappingURL=main.css.map */

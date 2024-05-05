@@ -1,0 +1,72 @@
+//한 줄 주석( // )은 최종파일에 반영X
+//여러 줄 주석( /**/ )은 최종파일에 반영O
+
+// 중첩 규칙(Nesting)
+.container{
+    background-color: green;
+    h1{
+        color:beige;
+    }
+    p{
+        color:antiquewhite;
+
+        span{
+            color:aqua
+        }
+    }
+}
+
+// 단축 속성 중첩(네임스페이스 속성 중첩)
+p{
+    font: {
+        style:italic;
+        weight:900;
+        size:32px;
+    }
+}
+
+// &로 상위 선택자 선택(참조), : 의사 클래스
+.btn{ 
+    &:hover{
+        background: red;
+    }
+}
+
+// 변수($)
+$main-color:orange;
+$font-color:white;
+button{
+    &:nth-child(1){
+        background:$main-color;
+        color:$font-color;
+        width:100px;
+    }
+    &:nth-child(2){
+        background:$main-color;
+        color:$font-color;
+        width:200px;
+    }
+    &:nth-child(3){
+        background:$main-color;
+        color:$font-color;
+        width:300px;
+    }
+}
+
+// 믹스인( @mixin ) -> ( @include )
+@mixin box-style($bg-color:yellow,$font-color:green){
+    width:100px;
+    height:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg-color;
+    color: $font-color;
+}
+.one{
+    @include box-style;
+}
+.two{
+    @include box-style(purple,yellow);
+}
+

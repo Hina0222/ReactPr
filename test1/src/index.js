@@ -5,12 +5,11 @@ import reportWebVitals from './reportWebVitals';
 //import App from './App';
 //import CommentList from './comment_ex/CommentList';
 //import Accommodate from './reactHooks_ex/Accommodate';
-import UseRef2 from './useRef_ex/UseRef2';
-
+import UseCallback2 from './useCallback_ex/UseCallback2';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UseRef2 />
+    <UseCallback2 />
   </React.StrictMode>
 );
 

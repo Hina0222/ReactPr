@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BroserRouter } from 'react-router-dom'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-//import App from './App';
+import App from './App';
 //import CommentList from './comment_ex/CommentList';
 //import Accommodate from './reactHooks_ex/Accommodate';
-import UseCallback2 from './useCallback_ex/UseCallback2';
+//import UseCallback2 from './useCallback_ex/UseCallback2';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UseCallback2 />
+    <App />
   </React.StrictMode>
 );
 

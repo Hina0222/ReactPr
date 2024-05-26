@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import UseState1 from "./useState_ex/UseState1";
 import UseState2 from "./useState_ex/UseState2";
+import UseState3 from "./useState_ex/UseState3";
 import UseEffect1 from "./useEffect_ex/UseEffect1";
 import UseEffect2 from "./useEffect_ex/UseEffect2";
 import UseMemo1 from "./useMemo_ex/UseMemo1";
@@ -21,6 +22,7 @@ function App() {
         <Link to="/">Home</Link>
         <Link to="/useState1">UseState1</Link>
         <Link to="/useState2">useState2</Link>
+        <Link to="/useState3">useState3</Link>
         <Link to="/useEffect1">useEffect1</Link>
         <Link to="/useEffect2">useEffect2</Link>
         <Link to="/useMemo1">useMemo1</Link>
@@ -36,6 +38,7 @@ function App() {
       <Routes>
         <Route path="/useState1" element={<UseState1 />} />
         <Route path="/useState2" element={<UseState2 />} />
+        <Route path="/useState3" element={<UseState3 />} />
         <Route path="/useEffect1" element={<UseEffect1 />} />
         <Route path="/useEffect2" element={<UseEffect2 />} />
         <Route path="/useMemo1" element={<UseMemo1 />} />

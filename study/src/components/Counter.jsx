@@ -24,8 +24,7 @@ const Counter = () => {
     return (
         <main >
             <h1>Redux Counter</h1>
-            {show && <div >{counter}</div>}
-            {!show && <div> 어쩔테레비 </div>}
+            {show ? <div >{counter}</div> : <div> 어쩔테레비 </div>}
             <div>{showBool}</div>
             <div>
                 <button onClick={incrementHandler}>Increment</button>

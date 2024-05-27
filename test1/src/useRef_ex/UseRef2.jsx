@@ -1,4 +1,5 @@
 /* eslint-disable */
+// DOM을 조작
 import React, { useEffect, useRef } from 'react';
 
 const UseRef2 = () => {

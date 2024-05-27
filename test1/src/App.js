@@ -13,6 +13,7 @@ import UseRef1 from "./useRef_ex/UseRef1";
 import UseRef2 from "./useRef_ex/UseRef2";
 import Accommodate from "./reactHooks_ex/Accommodate";
 import CommentList from "./comment_ex/CommentList";
+import Iteration_ex from './examples/Iteration_ex';
 
 function App() {
 
@@ -31,8 +32,9 @@ function App() {
         <Link to="/useCallback2">useCallback2</Link>
         <Link to="/useRef1">useRef1</Link>
         <Link to="/useRef2">useRef2</Link>
-        <Link to="/Accommodate">Accommodate</Link>
-        <Link to="/CommentList">CommentList</Link>
+        <Link to="/accommodate">Accommodate</Link>
+        <Link to="/commentList">CommentList</Link>
+        <Link to="/iteration_ex">Iteration_ex</Link>
       </nav>
       <hr />
       <Routes>
@@ -49,6 +51,7 @@ function App() {
         <Route path="/useRef2" element={<UseRef2 />} />
         <Route path="/accommodate" element={<Accommodate />} />
         <Route path="/commentList" element={<CommentList />} />
+        <Route path="/iteration_ex" element={<Iteration_ex />} />
       </Routes>
     </div>
   );

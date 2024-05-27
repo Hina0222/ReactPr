@@ -1,4 +1,6 @@
 /* eslint-disable */
+// ref 값은 변경되도 렌더링 x
+// ref 값은 유지, 무한루프 방지
 import React, { useState, useRef, useEffect } from 'react';
 
 const UseRef1 = () => {

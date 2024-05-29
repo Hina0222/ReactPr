@@ -1,35 +1,53 @@
-import { Outlet, createBrowserRouter } from "react-router-dom";
-import { Suspense ,lazy} from "react";
+import { Outlet, createBrowserRouter } from "react-router-dom"
 
+import { Suspense, lazy } from "react"
 
-//초기로딩에 말고 눌렀을 때 로딩하게
-const Test = lazy(()=>import("../components/Test"));
+const Login = lazy(() => import("../components/Login"))
+const Register = lazy(() => import("../components/Register"))
 
 function Loading() {
     return <div>로딩중입니다.</div>
 }
-// Outlet에 자식요소를 가져옴
+
 const router = createBrowserRouter([
+{
+element: (
+    <Suspense fallback={<Loading />}>
+    <header>
+        <h1
+        style={{
+            display: "flex",
+            justifyContent: "center",
+            backgroundColor: "coral",
+        }}
+        >
+        헤더
+        </h1>
+    </header>
+    <body>
+        <Outlet />
+    </body>
+    </Suspense>
+),
+children: [
     {
-        element:(
-        <Suspense fallback={<Loading/>}>
-            <header>헤더</header>
-            <body>
-                <Outlet/>
-            </body>
+    path: "login",
+    element: (
+        <Suspense fallback={<Loading />}>
+            <Login />
         </Suspense>
-        ),
-        children:[
-            {
-                path:"test",
-                element:(
-                <Suspense fallback={<Loading/>}>
-                    <Test/>
-                </Suspense>
-                ),
-            },
-        ],
+    ),
     },
+    {
+        path: "register",
+        element: (
+            <Suspense fallback={<Loading />}>
+                <Register />
+            </Suspense>
+        ),
+        }
+],
+},
 ])
 
-export default router;
+export default router

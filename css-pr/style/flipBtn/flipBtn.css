@@ -7,14 +7,14 @@
 body {
   background-color: black;
 }
-body .container {
+body .container1 {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 20%;
+  top: 20%;
+  transform: translate(-20%, -20%);
   perspective: 1000px;
 }
-body .container .flip-btn {
+body .container1 .flip-btn {
   width: 200px;
   height: 100px;
   color: white;
@@ -24,16 +24,28 @@ body .container .flip-btn {
   transition: 0.5s;
   cursor: pointer;
 }
-body .container .flip-btn:hover {
+body .container1 .flip-btn:hover {
   transform: rotateX(-90deg);
 }
-body .container .flip-btn .front {
+body .container1 .flip-btn .front {
   background-color: goldenrod;
   height: 100px;
   transform: translateZ(50px);
 }
-body .container .flip-btn .back {
+body .container1 .flip-btn .back {
   background-color: darkgoldenrod;
   height: 100px;
   transform: rotateX(90deg) translateZ(150px);
+}
+body .container2 {
+  position: absolute;
+  left: 80%;
+  top: 20%;
+  transform: translate(-80%, -20%);
+}
+body .container2 .rotate-box {
+  width: 200px;
+  height: 100px;
+  background-color: rgb(51, 51, 167);
+  transition: transform 0.5s;
 }

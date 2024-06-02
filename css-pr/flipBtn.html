@@ -7,11 +7,27 @@
     <link rel="stylesheet" href="style/flipBtn/flipBtn.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container1">
         <div class="flip-btn">
             <div class="front">안녕</div>
             <div class="back">하세요</div>
         </div>
     </div>
+    <div class="container2">
+        <div class="rotate-box"></div>
+        <br>
+        <input type="range" id="rotateSlide" min="0" max="360" value="0">
+    </div>
+ 
 </body>
+
+<script>
+    // container2
+    const slider = document.getElementById('rotateSlide');
+    const rotateBox = document.querySelector('.rotate-box');
+
+    slider.addEventListener('input', function() {
+        rotateBox.style.transform = `rotate(${slider.value}deg)`;
+    });
+</script>
 </html>

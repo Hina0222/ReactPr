@@ -8,6 +8,7 @@ const UseRef1 = () => {
     const renderCount = useRef(1);
 
     useEffect(() => {
+        // 무한루프 방지
         renderCount.current = renderCount.current + 1;
         console.log('렌더링 수:', renderCount.current);
     })
